@@ -15,7 +15,7 @@ username = 'idclogin'
 password = 'Idc@login' 
 cnxn = pyodbc.connect(DRIVER='{SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 
-@app.route('/')
+@app.route('/',methods=['POST','GET'])
 def home():
     return render_template("source.html")
     
